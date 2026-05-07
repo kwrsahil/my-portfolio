@@ -1,1 +1,82 @@
-<h1>Sahil Kunwar - Portfolio</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Kunwar | Developer & Student</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f8fafc;
+            --accent: #38bdf8;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container { max-width: 650px; width: 100%; margin-top: 50px; }
+        header { margin-bottom: 40px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--accent); }
+        .subtitle { opacity: 0.8; font-size: 1.1rem; }
+        
+        .card {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        h2 { font-size: 1.2rem; margin-top: 0; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+        .status-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .status-item { font-size: 0.9rem; border-left: 3px solid var(--accent); padding-left: 10px; }
+        
+        .links { margin-top: 30px; display: flex; gap: 20px; }
+        a { color: var(--text); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--accent); }
+        a:hover { background: var(--accent); color: var(--bg); }
+        
+        .skeleton-loader { height: 10px; background: #334155; border-radius: 5px; margin-top: 10px; position: relative; overflow: hidden; }
+        .progress { height: 100%; background: var(--accent); width: 65%; } /* Adjust % as you progress */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sahil Kunwar</h1>
+            <p class="subtitle">Student @ EJU Prep | Independent AI-Code Manager</p>
+        </header>
+
+        <section class="card">
+            <h2>Current Focus</h2>
+            <div class="status-grid">
+                <div class="status-item">
+                    <strong>EJU Math I+A</strong><br>
+                    Currently: 場合の数と確率 (Probability)
+                    <div class="skeleton-loader"><div class="progress" style="width: 75%;"></div></div>
+                </div>
+                <div class="status-item">
+                    <strong>Projects</strong><br>
+                    React Shift-Tracker v2.0
+                    <div class="skeleton-loader"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>About</h2>
+            <p>Building functional tools using AI collaboration. Managing a dual-work schedule in Japan while mastering High School Mathematics A. Currently optimizing workflows via Termux and Cloudflare.</p>
+        </section>
+
+        <footer class="links">
+            <a href="https://github.com/kwrsahil">GitHub</a>
+            <a href="mailto:your-email@example.com">Contact</a>
+        </footer>
+    </div>
+</body>
+</html>
