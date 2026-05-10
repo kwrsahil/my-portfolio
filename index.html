@@ -44,6 +44,9 @@
       --fd: 'Bebas Neue', sans-serif;
       --fs: 'Instrument Serif', serif;
       --fm: 'Inter', sans-serif;
+      --c-sahil: #c8f060;
+      --c-kumar: #e8e3db;
+      --c-kunwar: #ff6b35;
     }
 
     html { scroll-behavior: smooth; }
@@ -128,11 +131,10 @@
 
     /* ── Hero ── */
     .hero {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 80px clamp(20px, 5vw, 48px) clamp(48px, 8vw, 72px);
+      padding: clamp(120px, 20vh, 180px) clamp(20px, 5vw, 48px) clamp(48px, 8vw, 72px);
       position: relative;
     }
 
@@ -147,20 +149,36 @@
     }
 
     .hero-name {
-      font-family: var(--fd);
-      font-size: clamp(56px, 13vw, 160px);
-      line-height: 0.88;
+      font-size: clamp(52px, 12vw, 150px);
+      line-height: 0.9;
       color: var(--text);
       opacity: 0;
       animation: fadeUp 0.7s ease 0.35s forwards;
     }
 
+    .en-name {
+      font-family: var(--fd);
+      letter-spacing: -1px;
+    }
+
+    .jp-name {
+      font-family: var(--fm);
+      font-weight: 700;
+      letter-spacing: -2px;
+      font-size: clamp(40px, 9vw, 110px);
+    }
+
     .hero-name em {
       font-family: var(--fs);
       font-style: italic;
-      color: var(--accent);
       display: block;
     }
+
+    .jp-name em { font-family: inherit; font-style: normal; }
+
+    .n-sahil { color: var(--c-sahil); font-weight: 700; }
+    .n-kumar  { color: var(--c-kumar); }
+    .n-kunwar { color: var(--c-kunwar); }
 
     .hero-name-jp {
       font-family: var(--fm);
@@ -201,6 +219,7 @@
     }
 
     .badge.hi { border-color: var(--accent); color: var(--accent); }
+
 
     /* ── Section ── */
     .section-wrap {
@@ -564,9 +583,11 @@
       <span data-en-inline>Developer · Problem Solver · Based in Japan</span>
       <span data-jp-inline>デベロッパー · 問題解決者 · 日本在住</span>
     </div>
-    <div class="hero-name">
-      SAHIL<br/><em>Kumar Kunwar</em>
-      <div class="hero-name-jp" data-jp>クンワル　サヒル　クマル</div>
+    <div class="hero-name en-name" data-en-inline>
+      <span class="n-sahil">SAHIL</span> <span class="n-kumar">KUMAR</span><br/><span class="n-kunwar"><em>KUNWAR</em></span>
+    </div>
+    <div class="hero-name jp-name" data-jp-inline>
+      <span class="n-kunwar">クンワル</span> <span class="n-sahil">サヒル</span><br/><span class="n-kumar">クマル</span>
     </div>
     <p class="hero-sub">
       <span data-en-inline>I build tools that solve real problems —<br/>starting with the one I faced myself.</span>
@@ -603,13 +624,13 @@
             <p>I'm <strong>Sahil Kumar Kunwar</strong>, a Nepali student living in Japan, attending a language school while working two part-time jobs to cover living expenses.</p>
             <p>Somewhere between early-morning logistics shifts and late-night hotel work, I ran into a problem no app seemed to care about — managing two jobs simultaneously while staying under Japan's strict legal hour limits for international students: <em>28 hours per week during semester, 40 during long academic holidays</em>, across a rolling 7-day window that applies to all jobs combined.</p>
             <p>So I built something to fix it. That project became my introduction to programming — not through a course or bootcamp, but through a <strong>real problem I needed to solve</strong>. I focus on software integrity and building things that actually work under edge cases, legal constraints, and real-world use.</p>
-            <p>I'm currently preparing for the <strong>EJU (Japanese University Admission for International Students)</strong> with the goal of entering a prefectural university in Japan, while holding a <strong>JLPT N1</strong> certification.</p>
+            <p>I'm currently preparing for the <strong>EJU (Japanese University Admission for International Students)</strong> with the goal of entering a prefectural university in Japan, while holding a <strong>JLPT N1</strong> certification (Japanese Language Proficiency Test).</p>
           </div>
           <div data-jp>
-            <p>私は<strong>クンワル・サヒル・クマル</strong>、ネパール出身の学生です。日本の語学学校に通いながら、生活費のために2つのアルバイトをしています。</p>
+            <p>私は<strong>クンワル・サヒル・クマル</strong>、ネパール出身の留学生です。日本の語学学校に通いながら、生活費のために2つのアルバイトをしています。</p>
             <p>早朝の物流シフトと深夜のホテル勤務の中で、既存のアプリでは解決できない問題に直面しました。<em>通常時は週28時間、長期休暇中は週40時間</em>という留学生への厳格な労働時間制限を、複数の職場にまたがって管理することの難しさです。</p>
             <p>そこで、自分でツールを作ることにしました。これがプログラミングとの出会いです。コースやブートキャンプではなく、<strong>実際に直面した問題</strong>から始まりました。</p>
-            <p>現在は<strong>EJU（日本留学試験）</strong>の準備をしており、県立大学への入学を目指しています。<strong>JLPT N1</strong>取得済み。</p>
+            <p>現在は<strong>EJU（日本留学試験）</strong>の準備をしており、県立大学への入学を目指しています。日本語能力試験の<strong>1級レベル</strong>を合格済み。</p>
           </div>
         </div>
         <div class="reveal">
@@ -624,15 +645,7 @@
             </div>
             <div class="fact-row">
               <span class="fact-label"><span data-en-inline>Goal</span><span data-jp-inline>目標</span></span>
-              <span class="fact-value"><span data-en-inline>Prefectural university, 2026</span><span data-jp-inline>県立大学進学（2026年）</span></span>
-            </div>
-            <div class="fact-row">
-              <span class="fact-label"><span data-en-inline>EJU subjects</span><span data-jp-inline>EJU科目</span></span>
-              <span class="fact-value"><span data-en-inline>Japanese · Maths Course I · Japan and the World</span><span data-jp-inline>日本語・数学コース１・総合科目</span></span>
-            </div>
-            <div class="fact-row">
-              <span class="fact-label"><span data-en-inline>University exam</span><span data-jp-inline>入学考査</span></span>
-              <span class="fact-value"><span data-en-inline>Maths I·A·II·B(Sequences)·C(Vectors)</span><span data-jp-inline>数学Ⅰ·A·Ⅱ·B(数列)·C(ベクトル)</span></span>
+              <span class="fact-value"><span data-en-inline>Prefectural University, 2027</span><span data-jp-inline>県立大学進学（2027年）</span></span>
             </div>
             <div class="fact-row">
               <span class="fact-label"><span data-en-inline>Project version</span><span data-jp-inline>バージョン</span></span>
@@ -666,7 +679,10 @@
             </div>
             <div class="version-pill" id="version-badge">v1.8</div>
           </div>
-          <div class="project-title">SHIFT TRACKER</div>
+          <div class="project-title">
+          <span data-en-inline>SHIFT TRACKER</span>
+          <span data-jp-inline>シフト管理</span>
+        </div>
           <div class="project-sub">
             <span data-en-inline>Compliance-first shift management for international workers in Japan</span>
             <span data-jp-inline>日本で働く留学生のための法令遵守シフト管理ツール</span>
@@ -675,7 +691,7 @@
         <div class="project-body">
           <div data-en>
             <p>Built to solve a problem I faced daily: working two part-time jobs in Japan as an international student while staying within the legal weekly hour limits. The app enforces Japan's labor law in real time — <strong>28h/week during semester, 40h during academic holidays</strong> — across a rolling 7-day window spanning both jobs simultaneously.</p>
-            <p>The salary engine calculates take-home pay with full 乙欄 tax table support, deep-night premium (深夜割増), and year-end special allowances (年末年始特別手当). Every number matches actual payslip logic, not rough estimates.</p>
+            <p>The salary engine calculates take-home pay using the official withholding tax bracket table, with support for late-night shift premiums and year-end special allowances. Every number matches actual payslip logic, not rough estimates.</p>
             <p>Data lives in a <strong>private GitHub Gist</strong> — accessible from any device, any browser. Falls back to localStorage when offline, and blocks saves if Gist is unreachable to prevent overwriting master data with stale local state.</p>
           </div>
           <div data-jp>
@@ -696,8 +712,8 @@
             </div>
             <div class="feat">
               <strong><span data-en-inline>Full salary breakdown</span><span data-jp-inline>詳細な給与計算</span></strong>
-              <span data-en-inline>Hotel: base pay, night premium, year-end allowance, transport, meals, deductions. Logistics: 乙欄 tax brackets.</span>
-              <span data-jp-inline>ホテル: 基本給・深夜割増・年末年始手当・交通費・食事手当・各種控除。物流: 乙欄税率表。</span>
+              <span data-en-inline>Per-shift calculations including base pay, premiums, allowances, and deductions — using official tax bracket tables. Final take-home derived from actual payslip logic.</span>
+              <span data-jp-inline>シフトごとの基本給・各種手当・控除を、公式の税率表を用いて計算。実際の給与明細に基づいた手取り額を算出します。</span>
             </div>
             <div class="feat">
               <strong><span data-en-inline>Monthly projection</span><span data-jp-inline>月間収入予測</span></strong>
@@ -769,7 +785,7 @@
         <div class="skill-group">
           <div class="skill-group-label"><span data-en-inline>Languages</span><span data-jp-inline>言語</span></div>
           <ul class="skill-list">
-            <li><span><span data-en-inline>Japanese</span><span data-jp-inline>日本語</span></span> — JLPT N1</li>
+            <li><span><span data-en-inline>Japanese</span><span data-jp-inline>日本語</span></span> — <span data-en-inline>JLPT N1</span><span data-jp-inline>日本語能力試験1級</span></li>
             <li><span><span data-en-inline>English</span><span data-jp-inline>英語</span></span> — <span data-en-inline>Professional</span><span data-jp-inline>ビジネスレベル</span></li>
             <li><span><span data-en-inline>Nepali</span><span data-jp-inline>ネパール語</span></span> — <span data-en-inline>Native</span><span data-jp-inline>母国語</span></li>
             <li><span><span data-en-inline>Hindi</span><span data-jp-inline>ヒンディー語</span></span> — <span data-en-inline>Conversational</span><span data-jp-inline>日常会話</span></li>
