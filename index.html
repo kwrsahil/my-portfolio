@@ -3,10 +3,33 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sahil Kumar Kunwar</title>
+
+  <!-- Primary SEO -->
+  <title>Sahil Kumar Kunwar | Developer based in Japan</title>
+  <meta name="description" content="Sahil Kumar Kunwar (クンワル サヒル クマル) — developer based in Japan, JLPT N1, building real-world tools. Portfolio of Sahil Kunwar from Nepal."/>
+  <meta name="keywords" content="Sahil, Sahil Kunwar, Sahil Kumar Kunwar, サヒル, クンワル サヒル クマル, developer Japan, Nepal Japan developer, JLPT N1, portfolio"/>
+  <meta name="author" content="Sahil Kumar Kunwar"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://sahilkunwar.com.np"/>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://sahilkunwar.com.np"/>
+  <meta property="og:title" content="Sahil Kumar Kunwar | Developer based in Japan"/>
+  <meta property="og:description" content="Developer based in Japan. JLPT N1. Building real-world tools that solve real problems."/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:locale:alternate" content="ja_JP"/>
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Sahil Kumar Kunwar | Developer based in Japan"/>
+  <meta name="twitter:description" content="Developer based in Japan. JLPT N1. Building real-world tools."/>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -20,7 +43,7 @@
       --accent2: #ff6b35;
       --fd: 'Bebas Neue', sans-serif;
       --fs: 'Instrument Serif', serif;
-      --fm: 'DM Mono', monospace;
+      --fm: 'Inter', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -29,7 +52,7 @@
       background: var(--bg);
       color: var(--text);
       font-family: var(--fm);
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -67,7 +90,7 @@
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.65rem;
+      font-size: 0.7rem;
       letter-spacing: 2px;
       text-transform: uppercase;
       transition: color 0.2s;
@@ -105,10 +128,11 @@
 
     /* ── Hero ── */
     .hero {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: clamp(100px, 18vh, 160px) clamp(20px, 5vw, 48px) clamp(48px, 8vw, 72px);
+      padding: 80px clamp(20px, 5vw, 48px) clamp(48px, 8vw, 72px);
       position: relative;
     }
 
@@ -149,8 +173,8 @@
 
     .hero-sub {
       margin-top: 28px;
-      max-width: 500px;
-      font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+      max-width: 520px;
+      font-size: clamp(0.88rem, 1.8vw, 1rem);
       color: var(--muted);
       line-height: 1.9;
       opacity: 0;
@@ -180,8 +204,8 @@
 
     /* ── Section ── */
     .section-wrap {
-      padding: clamp(60px, 10vw, 100px) clamp(20px, 5vw, 48px);
-      max-width: 1100px;
+      padding: clamp(60px, 10vw, 100px) clamp(20px, 5vw, 64px);
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -217,10 +241,10 @@
     }
 
     .about-text p {
-      font-size: clamp(0.75rem, 1.8vw, 0.84rem);
+      font-size: clamp(0.85rem, 1.8vw, 0.95rem);
       color: var(--muted);
-      margin-bottom: 16px;
-      line-height: 1.9;
+      margin-bottom: 18px;
+      line-height: 1.95;
     }
 
     .about-text p strong { color: var(--text); font-weight: 500; }
@@ -243,7 +267,7 @@
     .fact-row:last-child { border-bottom: none; }
 
     .fact-label {
-      font-size: 0.58rem;
+      font-size: 0.62rem;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--muted);
@@ -255,6 +279,8 @@
       color: var(--text);
       text-align: right;
       line-height: 1.4;
+      word-break: break-word;
+      min-width: 0;
     }
 
     .fact-value.ac { color: var(--accent); }
@@ -323,11 +349,11 @@
     }
 
     .project-body p {
-      font-size: clamp(0.72rem, 1.7vw, 0.82rem);
+      font-size: clamp(0.84rem, 1.7vw, 0.93rem);
       color: var(--muted);
-      line-height: 1.9;
-      margin-bottom: 12px;
-      max-width: 680px;
+      line-height: 1.95;
+      margin-bottom: 14px;
+      max-width: 720px;
     }
 
     .project-body p strong { color: var(--text); font-weight: 500; }
@@ -340,12 +366,12 @@
     }
 
     .feat {
-      padding: 14px;
+      padding: 16px;
       border: 1px solid var(--border);
       border-radius: 2px;
-      font-size: clamp(0.64rem, 1.5vw, 0.7rem);
+      font-size: clamp(0.74rem, 1.5vw, 0.8rem);
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.65;
       transition: border-color 0.2s;
     }
 
@@ -411,9 +437,9 @@
       display: flex;
       align-items: flex-start;
       gap: 9px;
-      font-size: clamp(0.68rem, 1.6vw, 0.76rem);
+      font-size: clamp(0.78rem, 1.6vw, 0.86rem);
       color: var(--muted);
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
     .skill-list li::before {
@@ -436,10 +462,10 @@
     }
 
     .contact-left p {
-      font-size: clamp(0.74rem, 1.7vw, 0.83rem);
+      font-size: clamp(0.84rem, 1.7vw, 0.93rem);
       color: var(--muted);
       line-height: 1.9;
-      max-width: 380px;
+      max-width: 400px;
     }
 
     .contact-head {
