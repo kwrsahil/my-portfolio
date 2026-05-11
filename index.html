@@ -6,8 +6,8 @@
 
   <!-- Primary SEO -->
   <title>Sahil Kumar Kunwar | Developer based in Japan</title>
-  <meta name="description" content="Sahil Kumar Kunwar (クンワル サヒル クマル) — developer based in Japan, JLPT N1, building real-world tools. Portfolio of Sahil Kunwar from Nepal."/>
-  <meta name="keywords" content="Sahil, Sahil Kunwar, Sahil Kumar Kunwar, サヒル, クンワル サヒル クマル, developer Japan, Nepal Japan developer, JLPT N1, portfolio"/>
+  <meta name="description" content="Sahil Kumar Kunwar — developer based in Japan. JLPT N1. Building real-world tools that solve real problems."/>
+  <meta name="keywords" content="Sahil, Kumar, Kunwar, Sahil Kunwar, Sahil Kumar, Sahil Kumar Kunwar, サヒル,　クマル, クンワル, サヒル　クマル, クンワル　サヒル、 クンワル サヒル クマル, developer Japan, Nepal Japan developer, JLPT N1, portfolio"/>
   <meta name="author" content="Sahil Kumar Kunwar"/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://sahilkunwar.com.np"/>
@@ -72,22 +72,24 @@
 
     /* ── Nav ── */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px clamp(20px, 5vw, 48px);
-      background: rgba(10,10,10,0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-    }
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 14px clamp(16px, 4vw, 48px);
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
 
     .nav-links {
       display: flex;
       gap: clamp(20px, 4vw, 36px);
       list-style: none;
+      white-space: nowrap;
     }
 
     .nav-links a {
@@ -102,24 +104,27 @@
     .nav-links a:hover { color: var(--text); }
 
     .lang-toggle {
-      display: flex;
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      overflow: hidden;
+     display: flex;
+     border: 1px solid var(--border);
+     border-radius: 3px;
+     overflow: hidden;
+     flex-shrink: 0;
     }
 
     .lang-btn {
-      background: transparent;
-      border: none;
-      color: var(--muted);
-      font-family: var(--fm);
-      font-size: 0.6rem;
-      letter-spacing: 1.5px;
-      padding: 5px 11px;
-      cursor: pointer;
-      transition: background 0.15s, color 0.15s;
-      text-transform: uppercase;
-    }
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: var(--fm);
+  font-size: 0.6rem;
+  letter-spacing: 1.5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-transform: uppercase;
+  min-width: 32px;
+  text-align: center;
+}
 
     .lang-btn.active {
       background: var(--accent);
@@ -554,6 +559,7 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* ── Responsive ── */
+    
     @media (max-width: 700px) {
       .about-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; }
@@ -563,18 +569,23 @@
   </style>
 </head>
 <body data-lang="en">
-
   <nav>
-    <ul class="nav-links">
+    <a href="#" style="text-decoration:none;flex-shrink:0">
+  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="28" height="28" rx="3" fill="#0a0a0a"/>
+    <path d="M7 7 L7 14 L21 14 L21 21" stroke="#c8f060" stroke-width="2.5" stroke-linecap="square" fill="none"/>
+    <path d="M7 14 L21 14 L21 7" stroke="#c8f060" stroke-width="2.5" stroke-linecap="square" fill="none" opacity="0.35"/>
+  </svg>
+</a>
+      <ul class="nav-links">
       <li><a href="#about"><span data-en-inline>About</span><span data-jp-inline>私について</span></a></li>
       <li><a href="#work"><span data-en-inline>Work</span><span data-jp-inline>制作物</span></a></li>
       <li><a href="#skills"><span data-en-inline>Skills</span><span data-jp-inline>スキル</span></a></li>
       <li><a href="#contact"><span data-en-inline>Contact</span><span data-jp-inline>連絡先</span></a></li>
     </ul>
     <div class="lang-toggle">
-      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" id="btn-jp" onclick="setLang('jp')">JP</button>
-    </div>
+  <button class="lang-btn active" id="lang-toggle-btn" onclick="toggleLang()">JP</button>
+</div>
   </nav>
 
   <!-- Hero -->
@@ -621,13 +632,13 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <div data-en>
-            <p>I'm <strong>Sahil Kumar Kunwar</strong>, a Nepali student living in Japan, attending a language school while working two part-time jobs to cover living expenses.</p>
+            <p>I'm <strong>Sahil Kumar Kunwar</strong> — a developer based in Japan, building tools that solve real problems. I was born and raised in Nepal and I'm currently studying and working part-time in Japan.</p>
             <p>Somewhere between early-morning logistics shifts and late-night hotel work, I ran into a problem no app seemed to care about — managing two jobs simultaneously while staying under Japan's strict legal hour limits for international students: <em>28 hours per week during semester, 40 during long academic holidays</em>, across a rolling 7-day window that applies to all jobs combined.</p>
             <p>So I built something to fix it. That project became my introduction to programming — not through a course or bootcamp, but through a <strong>real problem I needed to solve</strong>. I focus on software integrity and building things that actually work under edge cases, legal constraints, and real-world use.</p>
             <p>I'm currently preparing for the <strong>EJU (Japanese University Admission for International Students)</strong> with the goal of entering a prefectural university in Japan, while holding a <strong>JLPT N1</strong> certification (Japanese Language Proficiency Test).</p>
           </div>
           <div data-jp>
-            <p>私は<strong>クンワル・サヒル・クマル</strong>、ネパール出身の留学生です。日本の語学学校に通いながら、生活費のために2つのアルバイトをしています。</p>
+            <p>こんにちは、私は<strong>クンワル　サヒル　クマル</strong>と申します。ネパール出身で日本在住の留学生・デベロッパーです。</p>
             <p>早朝の物流シフトと深夜のホテル勤務の中で、既存のアプリでは解決できない問題に直面しました。<em>通常時は週28時間、長期休暇中は週40時間</em>という留学生への厳格な労働時間制限を、複数の職場にまたがって管理することの難しさです。</p>
             <p>そこで、自分でツールを作ることにしました。これがプログラミングとの出会いです。コースやブートキャンプではなく、<strong>実際に直面した問題</strong>から始まりました。</p>
             <p>現在は<strong>EJU（日本留学試験）</strong>の準備をしており、県立大学への入学を目指しています。日本語能力試験の<strong>1級レベル</strong>を合格済み。</p>
@@ -831,11 +842,16 @@
 
   <script>
     function setLang(lang) {
-      document.body.setAttribute('data-lang', lang);
-      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.getElementById('btn-jp').classList.toggle('active', lang === 'jp');
-      localStorage.setItem('lang', lang);
-    }
+  document.body.setAttribute('data-lang', lang);
+  const btn = document.getElementById('lang-toggle-btn');
+  btn.textContent = lang === 'en' ? 'JP' : 'EN';
+  localStorage.setItem('lang', lang);
+}
+
+function toggleLang() {
+  const current = document.body.getAttribute('data-lang');
+  setLang(current === 'en' ? 'jp' : 'en');
+}
 
     // Detect language: saved preference > browser locale > 'en'
     function detectLang() {
