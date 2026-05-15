@@ -183,7 +183,7 @@ https://www.sahilkunwar.com.np/* https://sahilkunwar.com.np/:splat 301
 `favicon.svg` is the same SVG logo used in the nav — a geometric mark in accent green (`#c8f060`) on a dark background. Referenced in `<head>`:
 
 ```html
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 ```
 
 ---
