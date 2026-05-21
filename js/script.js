@@ -51,3 +51,9 @@ fetch('https://api.github.com/repos/kwrsahil/shift-tracker/git/refs/tags')
     if (pv) pv.textContent = latest;
   })
   .catch(() => {});
+  
+  const u = 'sahilkunwarofficial';
+const d = 'gmail.com';
+const el = document.getElementById('contact-email');
+el.href = 'mailto:' + u + '@' + d;
+el.appendChild(document.createTextNode(u + '@' + d));
